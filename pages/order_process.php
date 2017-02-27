@@ -32,7 +32,7 @@ include("db_connect.php");
     
                            
                         
-                         <button type="submit" name="submit" class="btn btn-outline btn-primary btn-lg"><a href="http://localhost/smartfridge_final/pages/dashboard">Return to Dashboard</a></button>
+                         <button type="submit" name="submit" class="btn btn-outline btn-primary btn-lg"><a href="dashboard.php">Return to Dashboard</a></button>
                 
         
 </html>
