@@ -1,5 +1,17 @@
 <?php
-include("db_connect.php");
+  // 1. Create a database connection
+  $dbhost = "localhost";
+  $dbuser = "root";
+  $dbpass = "";
+  $dbname = "test_db";
+  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+  // Test if connection succeeded
+  if(mysqli_connect_errno()) {
+    die("Database connection failed: " . 
+         mysqli_connect_error() . 
+         " (" . mysqli_connect_errno() . ")"
+    );
+  }
 ?>
     
     <?php
@@ -29,12 +41,12 @@ include("db_connect.php");
 
 <html>
 
-<?php
-		
-		// you don't use mysqli_free_result because it returns a boolran 
-		
-	?>
-	
+    
+                           
+                        
+                         <button type="submit" name="submit" class="btn btn-outline btn-primary btn-lg"><a href="http://localhost/smartfridge_final/pages/dashboard">Return to Dashboard</a></button>
+                
+        
 </html>
 
 <?php  mysqli_close($connection) ?> 
