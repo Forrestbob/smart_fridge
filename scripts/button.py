@@ -7,7 +7,7 @@ from email.MIMEMultipart import MIMEMultipart	#email modules
 import MySQLdb
 
 #mySQL config
-db = MySQLdb.connect("localhost", "DataBAEs", "DataBAEs", "test")
+db = MySQLdb.connect("localhost", "DataBAEs", "DataBAEs", "smart_fridge")
 curs=db.cursor()
 
 GPIO.setmode(GPIO.BCM)
@@ -31,7 +31,7 @@ while True:
 	input_state = GPIO.input(18)
 	if input_state == False:
 		try: 
-			curs.execute ("INSERT INTO `test`.`test_table` (`epochTime`) VALUES ('" + str(time.time()) + "')")
+			curs.execute ("INSERT INTO `smart_fridge`.`orders` (`productID`, `customerID`, `quantity`) VALUES ('1001', '1001', '1')")
 
 			db.commit()
 			
